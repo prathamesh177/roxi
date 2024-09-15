@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: my-express-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    branches:
+      - main
+    healthCheckPath: /api/health
+    autoDeploy: true
